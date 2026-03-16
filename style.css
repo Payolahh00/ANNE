@@ -1,0 +1,116 @@
+/* Universal styles that apply to all elements on the page */
+* {
+  /* Makes padding and borders part of the element's total width/height */
+  box-sizing: border-box;
+  /* Sets the default font for the whole page to Poppins (a clean font) */
+  font-family: 'poppins', sans-serif;
+  }
+
+  /* Styles for the body (the main page background) */
+  body {
+    /* Makes the body take up the full height of the screen */
+    height: 100vh;
+    /* Uses flexbox to center the calculator */
+    display: flex;
+    /* Centers the calculator horizontally */
+    justify-content: center;
+    /* Centers the calculator vertically */
+    align-items: center;
+    /* Creates a dark gradient background from blue-gray to black */
+    background: linear-gradient(135deg, #0f2027, #000);
+    /* Hides any overflow to keep the layout clean */
+    overflow: hidden;
+  }
+  /* Styles for the main calculator container */
+  .calculator {
+    /* Sets a fixed width for the calculator */
+    width: 320px;
+    /* Semi-transparent white background for a glassy look */
+    background: rgba(255, 255, 255, 0.08);
+    /* Blurs the background behind the calculator */
+    backdrop-filter: blur(15px);
+    /* Rounds the corners of the calculator */
+    border-radius: 20px;
+    /* Adds space inside the calculator */
+    padding: 20px;
+    /* Adds a glowing cyan shadow around the calculator */
+    box-shadow: 0 0 40px rgba(0, 245, 255, 0.5);
+ }
+ /* Styles for the display screen where numbers show */
+ .display {
+  /* Semi-transparent black background */
+  background: rgba(0,0,0,0.4);
+  /* Bright cyan text color */
+  color: #00f5ff;
+  /* Adds space inside the display */
+  padding: 15px;
+  /* Rounds the display corners */
+  border-radius: 12px;
+  /* Aligns text to the right, like a calculator */
+  text-align: right;
+  /* Makes the text bigger */
+  font-size: 28px;
+  /* Ensures the display has a minimum height */
+  min-height: 60px;
+  /* Adds space below the display */
+  margin-bottom: 15px;
+  /* Allows horizontal scrolling for long numbers */
+  overflow-x: auto;
+}
+ /* Styles for the container holding all the buttons */
+.buttons {
+  /* Uses a grid layout for the buttons */
+  display: grid;
+  /* Creates 4 equal columns for the buttons */
+  grid-template-columns: repeat(4, 1fr);
+  /* Adds space between the buttons */
+  gap: 10px;
+}
+ /* Styles for all buttons */
+button {
+  /* Adds space inside each button */
+  padding: 15px;
+  /* Sets the text size */
+  font-size: 18px;
+  /* Removes the default button border */
+  border: none;
+  /* Rounds the button corners */
+  border-radius: 12px;
+  /* Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.12);
+  /* White text color */
+  color: #fff;
+  /* Changes cursor to a pointer on hover */
+  cursor: pointer;
+  /* Smooth transition for hover effects */
+  transition: 0.2s;
+}
+ /* Styles for buttons when you hover over them */
+button:hover {
+  /* Changes background to a brighter cyan on hover */
+  background: rgba(0,245, 255,0.3);
+}
+ /* Styles for operator buttons (+, -, *, /) */
+.operator {
+  /* Magenta color to highlight operators */
+  color: #ff00e0;
+}
+ /* Styles for the equals (=) button */
+.equal {
+  /* Makes the equals button span 2 columns (wider) */
+  grid-column: span 2;
+  /* Gradient background from cyan to magenta */
+  background: linear-gradient(135deg, #00f5ff, #ff00e0);
+  /* Black text for contrast */
+  color: #000;
+  /* Makes the text bold */
+  font-weight: 600;
+}
+ /* Styles for the clear (C) button */
+.clear {
+  /* Red background to indicate clearing/reset */
+  background: rgba(255, 0, 0, 0.3);
+  /* White text color */
+  color: #fff;
+  
+}
